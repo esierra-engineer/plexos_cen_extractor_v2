@@ -1,4 +1,4 @@
-pandas
-numpy
-lxml
-openpyxl
+pandas>=2.2,<4.0
+numpy>=1.26,<3.0
+lxml>=5.0,<7.0
+openpyxl>=3.1,<4.0
