@@ -1,0 +1,135 @@
+<?xml version="1.0" standalone="yes"?>
+<UndocumentedParam xmlns="http://tempuri.org/UndocumentedParam.xsd">
+
+    <Report>
+     <ParameterName> CompiledConstraints </ParameterName>
+     <Value> True </Value>
+    </Report>
+
+    <MTSchedule>
+     <ParameterName> ResolutionBlockCount </ParameterName>
+     <Value> 24 </Value>
+     <Band> 1 </Band>
+    </MTSchedule>
+
+    <MTSchedule>
+     <ParameterName> ResolutionIntervalCount </ParameterName>
+     <Value> 24 </Value>
+     <Band> 1 </Band>
+    </MTSchedule>
+
+    <MTSchedule>
+     <ParameterName> ResolutionType </ParameterName>
+     <Value> 1 </Value>
+     <Band> 1 </Band>
+    </MTSchedule>
+
+    <MTSchedule>
+     <ParameterName> ResolutionBlockCount </ParameterName>
+     <Value> 24 </Value>
+     <Band> 2 </Band>
+    </MTSchedule>
+
+    <MTSchedule>
+     <ParameterName> ResolutionIntervalCount </ParameterName>
+     <Value> 24 </Value>
+     <Band> 2 </Band>
+    </MTSchedule>
+
+    <MTSchedule>
+     <ParameterName> ResolutionType </ParameterName>
+     <Value> 1 </Value>
+     <Band> 2 </Band>
+    </MTSchedule>
+
+    <MTSchedule>
+     <ParameterName> ResolutionBlockCount </ParameterName>
+     <Value> 24 </Value>
+     <Band> 3 </Band>
+    </MTSchedule>
+
+    <MTSchedule>
+     <ParameterName> ResolutionIntervalCount </ParameterName>
+     <Value> 24 </Value>
+     <Band> 3 </Band>
+    </MTSchedule>
+
+    <MTSchedule>
+     <ParameterName> ResolutionType </ParameterName>
+     <Value> 1 </Value>
+     <Band> 3 </Band>
+    </MTSchedule>
+
+    <MTSchedule>
+     <ParameterName> ResolutionBlockCount </ParameterName>
+     <Value> 20 </Value>
+     <Band> 4 </Band>
+    </MTSchedule>
+
+    <MTSchedule>
+     <ParameterName> ResolutionIntervalCount </ParameterName>
+     <Value> 24 </Value>
+     <Band> 4 </Band>
+    </MTSchedule>
+
+    <MTSchedule>
+     <ParameterName> ResolutionType </ParameterName>
+     <Value> 1 </Value>
+     <Band> 4 </Band>
+    </MTSchedule>
+
+    <MTSchedule>
+     <ParameterName> ResolutionBlockCount </ParameterName>
+     <Value> 13 </Value>
+     <Band> 5 </Band>
+    </MTSchedule>
+
+    <MTSchedule>
+     <ParameterName> ResolutionIntervalCount </ParameterName>
+     <Value> 24 </Value>
+     <Band> 5 </Band>
+    </MTSchedule>
+
+    <MTSchedule>
+     <ParameterName> ResolutionType </ParameterName>
+     <Value> 1 </Value>
+     <Band> 5 </Band>
+    </MTSchedule>
+
+    <MTSchedule>
+     <ParameterName> ResolutionBlockCount </ParameterName>
+     <Value> 13 </Value>
+     <Band> 6 </Band>
+    </MTSchedule>
+
+    <MTSchedule>
+     <ParameterName> ResolutionIntervalCount </ParameterName>
+     <Value> 24 </Value>
+     <Band> 6 </Band>
+    </MTSchedule>
+
+    <MTSchedule>
+     <ParameterName> ResolutionType </ParameterName>
+     <Value> 1 </Value>
+     <Band> 6 </Band>
+    </MTSchedule>
+
+    <MTSchedule>
+     <ParameterName> ResolutionBlockCount </ParameterName>
+     <Value> 13 </Value>
+     <Band> 7 </Band>
+    </MTSchedule>
+
+    <MTSchedule>
+     <ParameterName> ResolutionIntervalCount </ParameterName>
+     <Value> 24 </Value>
+     <Band> 7 </Band>
+    </MTSchedule>
+
+    <MTSchedule>
+     <ParameterName> ResolutionType </ParameterName>
+     <Value> 1 </Value>
+     <Band> 7 </Band>
+    </MTSchedule>
+
+</UndocumentedParam>

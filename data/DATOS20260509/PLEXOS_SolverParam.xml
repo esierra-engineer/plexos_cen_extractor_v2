@@ -1,0 +1,28 @@
+<?xml version="1.0" standalone="yes"?>
+<SolverParam xmlns="http://tempuri.org/SolverParam.xsd">
+
+ <CPLEX>
+   <ParameterName> CPX_PARAM_PARALLELMODE </ParameterName>
+   <Type>Integer</Type>
+   <Value>-1</Value>
+ </CPLEX>
+ 
+ <CPLEX>
+   <ParameterName> CPX_PARAM_MIPDISPLAY </ParameterName>
+   <Type>Integer</Type>
+   <Value>4</Value>
+ </CPLEX>
+ 
+ <CPLEX>
+   <ParameterName> CPX_PARAM_STARTALG </ParameterName>
+   <Type>Integer</Type>
+   <Value>6</Value>
+ </CPLEX>
+
+ <Gurobi>
+   <ParameterName>ZeroObjNodes</ParameterName>
+   <Type>Integer</Type>
+   <Value>4000000</Value>
+ </Gurobi>
+
+</SolverParam>

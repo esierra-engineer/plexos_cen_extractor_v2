@@ -1,0 +1,813 @@
+PLEXOS® 10.000 R08 (Built on 16/01/2025)
+
+Started Model "PRGdia_Full_Definitivo" at 08/05/2026 02:34:09 p. m. -->
+--------------------------------------------------------------------------------------------------------------------------------
+Element                                                                                                                  Records
+--------------------------------------------------------------------------------------------------------------------------------
+Objects.............................................................................................................        4603
+Attributes..........................................................................................................        2779
+Memberships.........................................................................................................       27150
+Properties..........................................................................................................       73978
+Scenario ( CPFDown_ON_BESS )........................................................................................           1
+Scenario ( CPFUp_ON_BESS )..........................................................................................           1
+Scenario ( CSFDown_ON_BESS )........................................................................................           1
+Scenario ( CSFUp_ON_BESS )..........................................................................................           1
+Scenario ( CTFDown_ON_BESS )........................................................................................           1
+Scenario ( CTFUp_ON_BESS )..........................................................................................           1
+Scenario ( MinTimesActivation ).....................................................................................         265
+Scenario ( RampasCarboneras ).......................................................................................          30
+Scenario ( StabilizationTimeActivation )............................................................................          12
+Scenario ( StartShutdownCost )......................................................................................        1463
+Scenario ( AngosturaOpConstraint )..................................................................................           2
+Scenario ( MachicuraOpConstraint )..................................................................................           4
+Scenario ( RalcoVolRamp )...........................................................................................           4
+Scenario ( BESSCPF_ON ).............................................................................................          24
+Scenario ( BidActivation )..........................................................................................        7041
+Scenario ( CPFDown_ON ).............................................................................................           9
+Scenario ( CPFUp_badFV )............................................................................................          24
+Scenario ( CPFUp_ON )...............................................................................................          49
+Scenario ( CSFDown_ON ).............................................................................................          11
+Scenario ( CSFUp_ON )...............................................................................................          17
+Scenario ( CTF_MinProvision10MW )...................................................................................        3721
+Scenario ( CTFDown_ON ).............................................................................................           3
+Scenario ( CTFOffline_ON )..........................................................................................         216
+Scenario ( CTFUp_ON )...............................................................................................           3
+Scenario ( RALCO_CPF7% )............................................................................................          10
+Scenario ( AntisimmetryERNC ).......................................................................................         817
+Scenario ( InternalRestrictions )...................................................................................          10
+Report Selections...................................................................................................         731
+--------------------------------------------------------------------------------------------------------------------------------
+Total...............................................................................................................      109241
+--------------------------------------------------------------------------------------------------------------------------------
+Units of Data.......................................................................................................      Metric
+Hydro Model.........................................................................................................      Volume
+Primary Compilation Started:
+Primary Compilation Completed. Time: 00:00:02.7
+Model Initialization Started -->
+--------------------------------------------------------------------------------------------------------------------------------
+Model Components:
+--------------------------------------------------------------------------------------------------------------------------------
+Input File....................................................................                               DBSEN_PRGDIARIO.xml
+MT Schedule...................................................................                                  Coordinador_base
+Stochastic....................................................................                                  Coordinador_base
+Transmission..................................................................                                  Coordinador_base
+Production....................................................................                                  Coordinador_base
+Performance...................................................................                                            Gurobi
+Diagnostic....................................................................                                   Coordinador_new
+Loaded solver parameter file: D:\Programa Diario\2026\202605\20260509\lineal_2\Datos\PLEXOS_SolverParam.xml
+Random Number Seed............................................................                                        1432446487
+Discount Rate.................................................................                                            0.00 %
+--------------------------------------------------------------------------------------------------------------------------------
+Loaded Custom Assembly: C:\Program Files\Energy Exemplar\PLEXOS 10.0\EEOpenPLEXOS.dll
+NOTE: Loaded 22 hidden parameters from "D:\Programa Diario\2026\202605\20260509\lineal_2\Datos\PLEXOS_Param.xml".
+Secondary Compilation Started:
+WARNING 3026: Read 0 records(s) for object "GLP_NUEVARENCAFA" in band 1, but expected 7. Default value of 1E+30 assumed. File: "Fuel_MaxOfftakeWeek.csv".
+Secondary Compilation Completed. Time: 00:00:00.8
+--------------------------------------------------------------------------------------------------------------------------------
+This Computer:
+--------------------------------------------------------------------------------------------------------------------------------
+Name..........................................................................                                      SRV-PLEXOS12
+User Name.....................................................................                                            plexos
+Physical Memory...............................................................                                          64.00 GB
+CPU Type......................................................................             13th Gen Intel(R) Core(TM) i9-13900KF
+CPU/Core Count................................................................                                                16
+--------------------------------------------------------------------------------------------------------------------------------
+WARNING 3026: Read 0 records(s) for object "IE_MEJILLONES_DIE" in band 1, but expected 7. Default value of 0 assumed. File: "Gen_HeatRate.csv".
+WARNING 3026: Read 0 records(s) for object "IE_MEJILLONES_GN_A" in band 1, but expected 7. Default value of 0 assumed. File: "Gen_HeatRate.csv".
+WARNING 3026: Read 0 records(s) for object "IE_MEJILLONES_GN_B" in band 1, but expected 7. Default value of 0 assumed. File: "Gen_HeatRate.csv".
+WARNING 3026: Read 0 records(s) for object "IE_MEJILLONES_GN_C" in band 1, but expected 7. Default value of 0 assumed. File: "Gen_HeatRate.csv".
+WARNING 3026: Read 0 records(s) for object "IE_MEJILLONES_GN_D" in band 1, but expected 7. Default value of 0 assumed. File: "Gen_HeatRate.csv".
+WARNING 3026: Read 0 records(s) for object "IE_MEJILLONES_GNL_A" in band 1, but expected 7. Default value of 0 assumed. File: "Gen_HeatRate.csv".
+WARNING 3026: Read 0 records(s) for object "IE_MEJILLONES_GNL_B" in band 1, but expected 7. Default value of 0 assumed. File: "Gen_HeatRate.csv".
+WARNING 3026: Read 0 records(s) for object "IE_MEJILLONES_GNL_C" in band 1, but expected 7. Default value of 0 assumed. File: "Gen_HeatRate.csv".
+WARNING 3026: Read 0 records(s) for object "IE_MEJILLONES_GNL_D" in band 1, but expected 7. Default value of 0 assumed. File: "Gen_HeatRate.csv".
+WARNING 3026: Read 0 records(s) for object "IE_MEJILLONES_GNL_E" in band 1, but expected 7. Default value of 0 assumed. File: "Gen_HeatRate.csv".
+WARNING 3026: Read 0 records(s) for object "IE_MEJILLONES_GNL_INF" in band 1, but expected 7. Default value of 0 assumed. File: "Gen_HeatRate.csv".
+WARNING 3026: Read 0 records(s) for object "IE_MEJILLONES_DIE" in band 1, but expected 7. Default value of 0 assumed. File: "Gen_VOMCharge.csv".
+WARNING 3026: Read 0 records(s) for object "IE_MEJILLONES_GN_A" in band 1, but expected 7. Default value of 0 assumed. File: "Gen_VOMCharge.csv".
+WARNING 3026: Read 0 records(s) for object "IE_MEJILLONES_GN_B" in band 1, but expected 7. Default value of 0 assumed. File: "Gen_VOMCharge.csv".
+WARNING 3026: Read 0 records(s) for object "IE_MEJILLONES_GN_C" in band 1, but expected 7. Default value of 0 assumed. File: "Gen_VOMCharge.csv".
+WARNING 3026: Read 0 records(s) for object "IE_MEJILLONES_GN_D" in band 1, but expected 7. Default value of 0 assumed. File: "Gen_VOMCharge.csv".
+WARNING 3026: Read 0 records(s) for object "IE_MEJILLONES_GNL_A" in band 1, but expected 7. Default value of 0 assumed. File: "Gen_VOMCharge.csv".
+WARNING 3026: Read 0 records(s) for object "IE_MEJILLONES_GNL_B" in band 1, but expected 7. Default value of 0 assumed. File: "Gen_VOMCharge.csv".
+WARNING 3026: Read 0 records(s) for object "IE_MEJILLONES_GNL_C" in band 1, but expected 7. Default value of 0 assumed. File: "Gen_VOMCharge.csv".
+WARNING 3026: Read 0 records(s) for object "IE_MEJILLONES_GNL_D" in band 1, but expected 7. Default value of 0 assumed. File: "Gen_VOMCharge.csv".
+WARNING 3026: Read 0 records(s) for object "IE_MEJILLONES_GNL_E" in band 1, but expected 7. Default value of 0 assumed. File: "Gen_VOMCharge.csv".
+WARNING 3026: Read 0 records(s) for object "IE_MEJILLONES_GNL_INF" in band 1, but expected 7. Default value of 0 assumed. File: "Gen_VOMCharge.csv".
+WARNING 3026: Read 0 records(s) for object "IE_MEJILLONES_DIE" in band 1, but expected 7. Default value of 0 assumed. File: "Gen_StartCost.csv".
+WARNING 3026: Read 0 records(s) for object "IE_MEJILLONES_GN_A" in band 1, but expected 7. Default value of 0 assumed. File: "Gen_StartCost.csv".
+WARNING 3026: Read 0 records(s) for object "IE_MEJILLONES_GN_B" in band 1, but expected 7. Default value of 0 assumed. File: "Gen_StartCost.csv".
+WARNING 3026: Read 0 records(s) for object "IE_MEJILLONES_GN_C" in band 1, but expected 7. Default value of 0 assumed. File: "Gen_StartCost.csv".
+WARNING 3026: Read 0 records(s) for object "IE_MEJILLONES_GN_D" in band 1, but expected 7. Default value of 0 assumed. File: "Gen_StartCost.csv".
+WARNING 3026: Read 0 records(s) for object "IE_MEJILLONES_GNL_A" in band 1, but expected 7. Default value of 0 assumed. File: "Gen_StartCost.csv".
+WARNING 3026: Read 0 records(s) for object "IE_MEJILLONES_GNL_B" in band 1, but expected 7. Default value of 0 assumed. File: "Gen_StartCost.csv".
+WARNING 3026: Read 0 records(s) for object "IE_MEJILLONES_GNL_C" in band 1, but expected 7. Default value of 0 assumed. File: "Gen_StartCost.csv".
+WARNING 3026: Read 0 records(s) for object "IE_MEJILLONES_GNL_D" in band 1, but expected 7. Default value of 0 assumed. File: "Gen_StartCost.csv".
+WARNING 3026: Read 0 records(s) for object "IE_MEJILLONES_GNL_E" in band 1, but expected 7. Default value of 0 assumed. File: "Gen_StartCost.csv".
+WARNING 3026: Read 0 records(s) for object "IE_MEJILLONES_GNL_INF" in band 1, but expected 7. Default value of 0 assumed. File: "Gen_StartCost.csv".
+WARNING 3026: Read 0 records(s) for object "IE_MEJILLONES_CA_GNL" in band 1, but expected 7. Default value of 0 assumed. File: "Gen_StartCost.csv".
+WARNING 3026: Read 0 records(s) for object "IE_MEJILLONES_DIE" in band 1, but expected 7. Default value of 0 assumed. File: "Gen_ShutdownCost.csv".
+WARNING 3026: Read 0 records(s) for object "IE_MEJILLONES_GN_A" in band 1, but expected 7. Default value of 0 assumed. File: "Gen_ShutdownCost.csv".
+WARNING 3026: Read 0 records(s) for object "IE_MEJILLONES_GN_B" in band 1, but expected 7. Default value of 0 assumed. File: "Gen_ShutdownCost.csv".
+WARNING 3026: Read 0 records(s) for object "IE_MEJILLONES_GN_C" in band 1, but expected 7. Default value of 0 assumed. File: "Gen_ShutdownCost.csv".
+WARNING 3026: Read 0 records(s) for object "IE_MEJILLONES_GN_D" in band 1, but expected 7. Default value of 0 assumed. File: "Gen_ShutdownCost.csv".
+WARNING 3026: Read 0 records(s) for object "IE_MEJILLONES_GNL_A" in band 1, but expected 7. Default value of 0 assumed. File: "Gen_ShutdownCost.csv".
+WARNING 3026: Read 0 records(s) for object "IE_MEJILLONES_GNL_B" in band 1, but expected 7. Default value of 0 assumed. File: "Gen_ShutdownCost.csv".
+WARNING 3026: Read 0 records(s) for object "IE_MEJILLONES_GNL_C" in band 1, but expected 7. Default value of 0 assumed. File: "Gen_ShutdownCost.csv".
+WARNING 3026: Read 0 records(s) for object "IE_MEJILLONES_GNL_D" in band 1, but expected 7. Default value of 0 assumed. File: "Gen_ShutdownCost.csv".
+WARNING 3026: Read 0 records(s) for object "IE_MEJILLONES_GNL_E" in band 1, but expected 7. Default value of 0 assumed. File: "Gen_ShutdownCost.csv".
+WARNING 3026: Read 0 records(s) for object "IE_MEJILLONES_GNL_INF" in band 1, but expected 7. Default value of 0 assumed. File: "Gen_ShutdownCost.csv".
+WARNING 3026: Read 0 records(s) for object "IE_MEJILLONES_CA_GNL" in band 1, but expected 7. Default value of 0 assumed. File: "Gen_ShutdownCost.csv".
+WARNING 3026: Read 0 records(s) for object "DIESEL_ENOR" in band 1, but expected 7. Default value of 0 assumed. File: "Fuel_Price.csv".
+WARNING 3026: Read 0 records(s) for object "DIESEL_IEM" in band 1, but expected 7. Default value of 0 assumed. File: "Fuel_Price.csv".
+WARNING 3026: Read 0 records(s) for object "FUELOIL_ANDES" in band 1, but expected 7. Default value of 0 assumed. File: "Fuel_Price.csv".
+Generating stochastic samples...
+<-- Model Initialized. Time: 00:00:06.0
+WARNING 85: Generator "CENIZAS_U5" minimum operating level (4.58) should be less than or equal to maximum operating level (4.3651).
+WARNING 85: Generator "NUEVA_RENCA-FA_GN_A" minimum operating level (50.33) should be less than or equal to maximum operating level (49.77).
+WARNING 85: Generator "NUEVA_RENCA-FA_GN_B" minimum operating level (50.33) should be less than or equal to maximum operating level (49.77).
+WARNING 85: Generator "NUEVA_RENCA-FA_GN_C" minimum operating level (50.33) should be less than or equal to maximum operating level (49.77).
+WARNING 85: Generator "NUEVA_RENCA-FA_GN_D" minimum operating level (50.33) should be less than or equal to maximum operating level (49.77).
+WARNING 85: Generator "NUEVA_RENCA-FA_GNL_A" minimum operating level (50.33) should be less than or equal to maximum operating level (49.77).
+WARNING 85: Generator "NUEVA_RENCA-FA_GNL_B" minimum operating level (50.33) should be less than or equal to maximum operating level (49.77).
+WARNING 85: Generator "NUEVA_RENCA-FA_GNL_C" minimum operating level (50.33) should be less than or equal to maximum operating level (49.77).
+WARNING 85: Generator "NUEVA_RENCA-FA_GNL_D" minimum operating level (50.33) should be less than or equal to maximum operating level (49.77).
+WARNING 85: Generator "NUEVA_RENCA-FA_GNL_E" minimum operating level (50.33) should be less than or equal to maximum operating level (49.77).
+WARNING 85: Generator "NUEVA_RENCA-FA_GNL_P" minimum operating level (50.33) should be less than or equal to maximum operating level (49.77).
+WARNING 85: Generator "NUEVA_RENCA-FA_GNL_INF" minimum operating level (50.33) should be less than or equal to maximum operating level (49.77).
+WARNING 85: Generator "NUEVA_RENCA-FA_GLP" minimum operating level (50.33) should be less than or equal to maximum operating level (31.92).
+--------------------------------------------------------------------------------------------------------------------------------
+Tasks: 1   Cols 3,009,140   Ints 351,448   Rows 5,019,197   Nzs  13,338,663
+--------------------------------------------------------------------------------------------------------------------------------
+Coefficient statistics:
+  Matrix Range:     [-1.000000e+005] - [4.350042e+003]    [1.021168e-005] - [1.000000e+005]
+  Objective Range:  [-1.231331e+002] - [1.888202e+005]    [1.527593e-004] - [1.888202e+005]
+  Bounds Range:     [-3.000000e+003] - [5.585888e+006]    [2.412974e-005] - [5.585888e+006]
+  RHS Range:        [-1.000000e+005] - [1.000000e+005]    [1.000000e-003] - [1.000000e+005]
+--------------------------------------------------------------------------------------------------------------------------------
+Gurobi Optimizer version 12.0.0 build v12.0.0rc1 (win64 - Windows 10.0 (19045.2))
+CPU model: 13th Gen Intel(R) Core(TM) i9-13900KF, instruction set [SSE2|AVX|AVX2]
+Thread count: 8 physical cores, 16 logical processors, using up to 16 threads
+Non-default parameters:
+Method  2
+ZeroObjNodes  4000000
+OutputFlag  0
+GURO_PAR_FIXMODELINDICATORS  1
+Optimize a model with 5019197 rows, 3009140 columns and 13338663 nonzeros
+Model fingerprint: 0xf49fdfe7
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+05]
+  Objective range  [2e-04, 2e+05]
+  Bounds range     [2e-05, 6e+06]
+  RHS range        [1e-03, 1e+05]
+Presolve removed 4339927 rows and 2664851 columns
+Presolve time: 3.36s
+Presolved: 679270 rows, 345861 columns, 3751090 nonzeros
+Ordering time: 4.71s
+Barrier statistics:
+ Free vars  : 96
+ AA' NZ     : 1.140e+07
+ Factor NZ  : 7.116e+07 (roughly 1.0 GB of memory)
+ Factor Ops : 1.512e+11 (roughly 1 second per iteration)
+ Threads    : 8
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   2.18140765e+15 -3.43435344e+15  6.06e+08 1.88e+06  2.06e+12    11s
+   1   1.84281328e+15 -3.16011982e+15  5.18e+08 1.58e+06  1.76e+12    12s
+   2   8.57533536e+14 -2.31303285e+15  2.56e+08 8.42e+05  8.85e+11    13s
+   3   3.93192684e+14 -1.58178047e+15  1.07e+08 3.50e+05  3.77e+11    14s
+   4   1.43565418e+14 -1.03823425e+15  2.92e+07 1.23e+05  1.08e+11    15s
+   5   6.27497756e+13 -5.63312358e+14  9.61e+06 2.42e+04  3.71e+10    16s
+   6   1.12781252e+13 -2.76562274e+14  1.29e+06 3.00e+03  5.18e+09    16s
+   7   2.67186868e+12 -1.18053544e+14  2.61e+05 6.61e+02  1.13e+09    17s
+   8   1.11966456e+12 -6.81722042e+13  1.04e+05 2.87e+02  4.65e+08    18s
+   9   5.55045731e+11 -4.54525516e+13  4.88e+04 1.66e+02  2.29e+08    19s
+  10   2.73581360e+11 -2.98832139e+13  2.17e+04 9.68e+01  1.10e+08    19s
+  11   1.83544720e+11 -1.47806461e+13  1.37e+04 3.88e+01  6.42e+07    20s
+  12   9.55896001e+10 -9.13616880e+12  6.34e+03 1.87e+01  3.15e+07    21s
+  13   4.37918950e+10 -5.69411823e+12  2.43e+03 8.40e+00  1.43e+07    22s
+  14   1.72253087e+10 -3.08021150e+12  1.88e+02 3.03e+00  5.31e+06    22s
+  15   8.53133202e+09 -1.08345397e+12  6.87e+01 5.95e-01  1.68e+06    23s
+  16   5.89268281e+09 -5.13449123e+11  3.38e+01 2.31e-01  7.25e+05    24s
+  17   5.05080712e+09 -2.61003198e+11  2.42e+01 9.66e-02  3.83e+05    24s
+  18   3.29509039e+09 -9.13733383e+10  7.81e+00 2.30e-02  1.18e+05    25s
+  19   1.61040562e+09 -4.40391811e+10  2.17e+00 9.19e-03  4.80e+04    26s
+  20   8.31044853e+08 -2.40788403e+10  1.08e+00 4.64e-03  2.51e+04    27s
+  21   5.86459732e+08 -1.20353664e+10  6.67e-01 2.18e-03  1.27e+04    27s
+  22   2.39873088e+08 -5.01474278e+09  1.57e-01 8.44e-04  4.99e+03    28s
+  23   1.49895843e+08 -2.08488666e+09  5.38e-02 3.35e-04  2.08e+03    29s
+  24   1.23488447e+08 -9.43428702e+08  3.25e-02 2.47e-04  9.94e+02    29s
+  25   1.05462009e+08 -6.54931168e+08  2.08e-02 2.75e-04  7.04e+02    30s
+  26   8.15631391e+07 -2.94185828e+08  9.18e-03 3.31e-04  3.45e+02    31s
+  27   6.97097198e+07 -1.72804952e+08  5.41e-03 3.03e-04  2.22e+02    32s
+  28   6.17639855e+07 -1.15657721e+08  3.77e-03 2.76e-04  1.62e+02    32s
+  29   5.68767740e+07 -1.02016123e+08  2.88e-03 2.65e-04  1.45e+02    33s
+  30   5.40644200e+07 -5.43926076e+07  2.42e-03 2.22e-04  9.89e+01    34s
+  31   4.94780010e+07 -2.51294675e+07  1.71e-03 1.96e-04  6.80e+01    35s
+  32   4.52213778e+07 -2.76773999e+06  1.18e-03 1.83e-04  4.38e+01    35s
+  33   4.07021873e+07  4.03929682e+06  7.03e-04 1.84e-04  3.33e+01    36s
+  34   3.82625163e+07  1.25140247e+07  4.90e-04 1.32e-04  2.34e+01    37s
+  35   3.72047828e+07  1.63329376e+07  4.15e-04 1.07e-04  1.90e+01    38s
+  36   3.59221763e+07  1.97308024e+07  3.29e-04 8.23e-05  1.47e+01    38s
+  37   3.40747465e+07  2.25202429e+07  2.21e-04 6.02e-05  1.05e+01    39s
+  38   3.34988226e+07  2.36348567e+07  1.96e-04 5.09e-05  8.96e+00    40s
+  39   3.26420188e+07  2.47452543e+07  1.57e-04 3.99e-05  7.17e+00    41s
+  40   3.20461641e+07  2.58759748e+07  1.32e-04 2.98e-05  5.61e+00    42s
+  41   3.12432991e+07  2.64575970e+07  9.87e-05 2.38e-05  4.35e+00    43s
+  42   3.05534079e+07  2.69757428e+07  7.04e-05 1.83e-05  3.25e+00    44s
+  43   3.00859139e+07  2.74689305e+07  5.21e-05 1.29e-05  2.38e+00    44s
+  44   2.98142751e+07  2.77400034e+07  4.17e-05 9.96e-06  1.88e+00    45s
+  45   2.96848582e+07  2.79629123e+07  3.69e-05 7.62e-06  1.57e+00    46s
+  46   2.95248991e+07  2.80654488e+07  3.11e-05 6.48e-06  1.33e+00    47s
+  47   2.94503631e+07  2.81222247e+07  2.84e-05 5.82e-06  1.21e+00    48s
+  48   2.92788478e+07  2.81622710e+07  2.22e-05 5.37e-06  1.01e+00    49s
+  49   2.92185436e+07  2.82738929e+07  2.00e-05 4.18e-06  8.59e-01    50s
+  50   2.91530135e+07  2.83038877e+07  1.76e-05 3.83e-06  7.72e-01    50s
+  51   2.90423148e+07  2.83695301e+07  1.37e-05 3.08e-06  6.11e-01    51s
+  52   2.90064564e+07  2.84151939e+07  1.25e-05 2.57e-06  5.38e-01    52s
+  53   2.89531661e+07  2.84640848e+07  1.06e-05 5.57e-06  4.45e-01    53s
+  54   2.88529430e+07  2.85229671e+07  7.16e-06 4.89e-06  3.00e-01    54s
+  55   2.88274472e+07  2.85318244e+07  6.31e-06 4.49e-06  2.69e-01    55s
+  56   2.87892146e+07  2.85552732e+07  5.01e-06 3.51e-06  2.13e-01    56s
+  57   2.87498383e+07  2.85583238e+07  3.70e-06 3.38e-06  1.74e-01    57s
+  58   2.87429564e+07  2.85639487e+07  3.47e-06 3.15e-06  1.63e-01    58s
+  59   2.87263775e+07  2.85845698e+07  2.91e-06 2.23e-06  1.29e-01    59s
+  60   2.87146761e+07  2.85961819e+07  2.52e-06 1.72e-06  1.08e-01    60s
+  61   2.86929891e+07  2.86035158e+07  1.83e-06 1.41e-06  8.14e-02    61s
+  62   2.86915921e+07  2.86061114e+07  1.78e-06 1.30e-06  7.78e-02    62s
+  63   2.86830219e+07  2.86102211e+07  1.51e-06 1.13e-06  6.62e-02    63s
+  64   2.86800758e+07  2.86145272e+07  1.41e-06 9.40e-07  5.97e-02    64s
+  65   2.86753345e+07  2.86168380e+07  1.26e-06 8.39e-07  5.32e-02    65s
+  66   2.86727264e+07  2.86200083e+07  1.18e-06 6.99e-07  4.80e-02    66s
+  67   2.86719802e+07  2.86217234e+07  1.16e-06 6.23e-07  4.58e-02    68s
+  68   2.86634947e+07  2.86254017e+07  8.89e-07 4.55e-07  3.47e-02    69s
+  69   2.86547354e+07  2.86276295e+07  1.12e-06 3.54e-07  2.47e-02    70s
+  70   2.86495018e+07  2.86305728e+07  8.10e-07 2.04e-07  1.73e-02    71s
+  71   2.86467391e+07  2.86318642e+07  1.05e-06 1.51e-07  1.36e-02    73s
+  72   2.86435383e+07  2.86324798e+07  7.62e-07 1.28e-07  1.01e-02    74s
+  73   2.86406560e+07  2.86326709e+07  5.13e-07 1.16e-07  7.27e-03    75s
+  74   2.86394947e+07  2.86333364e+07  1.74e-06 8.79e-08  5.61e-03    76s
+  75   2.86382459e+07  2.86340173e+07  2.15e-06 3.39e-08  3.86e-03    77s
+  76   2.86367095e+07  2.86344898e+07  1.23e-06 2.86e-08  2.03e-03    79s
+  77   2.86357326e+07  2.86346094e+07  1.27e-06 5.23e-08  1.03e-03    80s
+  78   2.86352084e+07  2.86346716e+07  6.09e-07 4.05e-08  4.91e-04    81s
+  79   2.86348881e+07  2.86346901e+07  3.64e-07 3.71e-08  1.81e-04    82s
+  80   2.86347513e+07  2.86347006e+07  9.05e-07 2.06e-08  4.62e-05    82s
+  81   2.86347418e+07  2.86347026e+07  1.18e-06 1.55e-08  3.56e-05    83s
+  82   2.86347148e+07  2.86347061e+07  1.76e-06 1.33e-08  7.94e-06    84s
+  83   2.86347127e+07  2.86347075e+07  1.45e-06 1.49e-08  4.80e-06    84s
+  84   2.86347109e+07  2.86347080e+07  7.83e-07 1.49e-08  2.65e-06    85s
+  85   2.86347099e+07  2.86347082e+07  3.94e-07 1.82e-08  1.46e-06    86s
+  86   2.86347094e+07  2.86347083e+07  2.26e-06 1.49e-08  9.82e-07    87s
+Barrier solved model in 86 iterations and 86.64 seconds (158.72 work units)
+Optimal objective 2.86347094e+07
+Crossover log...
+  405368 DPushes remaining with DInf 3.1614722e-03                87s
+       0 DPushes remaining with DInf 0.0000000e+00                88s
+   42523 PPushes remaining with PInf 6.8900479e-02                89s
+    3812 PPushes remaining with PInf 9.1562303e-03                90s
+       0 PPushes remaining with PInf 4.2530348e-06                90s
+  Push phase complete: Pinf 4.2530348e-06, Dinf 4.3291901e+03     90s
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+  202134    2.8634709e+07   0.000000e+00   4.329190e+03     90s
+Extra simplex iterations after uncrush: 3
+  202302    2.8634709e+07   0.000000e+00   0.000000e+00     93s
+Solved in 202302 iterations and 93.04 seconds (171.98 work units)
+Optimal objective  2.863470872e+07
+User-callback calls 454384, time in user-callback 0.11 sec
+--------------------------------------------------------------------------------------------------------------------------------
+Coefficient statistics:
+  Matrix Range:     [-1.000000e+005] - [4.350042e+003]    [1.021168e-005] - [1.000000e+005]
+  Objective Range:  [-1.231331e+002] - [1.888202e+005]    [1.527593e-004] - [1.888202e+005]
+  Bounds Range:     [-3.000000e+003] - [5.585888e+006]    [2.412974e-005] - [5.585888e+006]
+  RHS Range:        [-1.000000e+005] - [1.000000e+005]    [1.000000e-003] - [1.000000e+005]
+--------------------------------------------------------------------------------------------------------------------------------
+Gurobi Optimizer version 12.0.0 build v12.0.0rc1 (win64 - Windows 10.0 (19045.2))
+CPU model: 13th Gen Intel(R) Core(TM) i9-13900KF, instruction set [SSE2|AVX|AVX2]
+Thread count: 8 physical cores, 16 logical processors, using up to 16 threads
+Non-default parameters:
+TimeLimit  7200
+MIPGap  0.001
+Method  4
+ZeroObjNodes  4000000
+OutputFlag  0
+GURO_PAR_FIXMODELINDICATORS  1
+Optimize a model with 5019197 rows, 3009140 columns and 13338663 nonzeros
+Model fingerprint: 0x6f4ad767
+Variable types: 2657692 continuous, 351448 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+05]
+  Objective range  [2e-04, 2e+05]
+  Bounds range     [2e-05, 6e+06]
+  RHS range        [1e-03, 1e+05]
+Presolve removed 4228767 rows and 2575543 columns
+Presolve time: 2.11s
+Presolved: 790430 rows, 433597 columns, 3634057 nonzeros
+Variable types: 291711 continuous, 141886 integer (140951 binary)
+Performing another presolve...
+Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+Root barrier log...
+Ordering time: 2.20s
+Barrier statistics:
+ AA' NZ     : 3.736e+06
+ Factor NZ  : 2.237e+07 (roughly 500 MB of memory)
+ Factor Ops : 1.490e+10 (less than 1 second per iteration)
+ Threads    : 5
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   6.19243499e+13 -2.48869500e+13  4.08e+07 4.00e+05  2.92e+10    18s
+   1   3.57506971e+13 -2.16733455e+13  2.32e+07 5.01e+05  1.68e+10    18s
+   2   7.99642973e+12 -1.38494663e+13  4.98e+06 3.30e+04  3.68e+09    18s
+   3   1.95430977e+12 -7.74110356e+12  1.06e+06 3.53e+02  7.92e+08    19s
+   4   3.48708094e+11 -5.84317843e+12  1.50e+05 3.26e-08  1.18e+08    19s
+   5   7.32213730e+10 -3.91823239e+12  2.11e+04 9.43e-09  1.93e+07    19s
+   6   2.59089316e+10 -2.31310500e+12  6.23e+03 6.98e-09  6.54e+06    20s
+   7   1.67542088e+10 -1.34739005e+12  3.39e+03 3.96e-09  3.53e+06    20s
+   8   1.12866622e+10 -1.01618522e+12  2.11e+03 1.42e-07  2.28e+06    20s
+   9   7.60849922e+09 -7.86599039e+11  1.22e+03 7.82e-08  1.46e+06    20s
+  10   5.75874962e+09 -5.58877648e+11  5.45e+02 5.59e-08  9.31e+05    20s
+  11   4.37602576e+09 -3.22087767e+11  1.14e+02 1.30e-06  4.73e+05    21s
+  12   3.20706901e+09 -1.58380662e+11  5.23e+01 4.69e-07  2.09e+05    21s
+  13   2.23784637e+09 -8.47595268e+10  2.23e+01 2.46e-07  1.02e+05    21s
+  14   1.23096734e+09 -3.41085048e+10  9.64e+00 9.31e-08  3.91e+04    22s
+  15   7.66964130e+08 -1.31601012e+10  6.04e+00 3.17e-08  1.51e+04    22s
+  16   7.35871130e+08 -1.09126608e+10  5.75e+00 2.70e-08  1.26e+04    22s
+  17   6.25073167e+08 -5.88876394e+09  4.74e+00 1.40e-08  7.04e+03    22s
+  18   1.85347789e+08 -2.46202156e+09  2.58e-01 5.12e-09  2.73e+03    23s
+  19   1.48276603e+08 -1.41020298e+09  1.50e-01 2.91e-09  1.60e+03    23s
+  20   1.28888794e+08 -7.74059614e+08  1.03e-01 1.62e-09  9.25e+02    23s
+  21   1.05954694e+08 -3.97313951e+08  6.45e-02 9.70e-10  5.15e+02    24s
+  22   8.91245890e+07 -2.01552495e+08  4.35e-02 1.19e-09  2.97e+02    24s
+  23   8.30307137e+07 -1.18059428e+08  3.72e-02 1.20e-09  2.06e+02    24s
+  24   7.27314854e+07 -7.81992847e+07  2.76e-02 2.28e-09  1.54e+02    24s
+  25   6.04456643e+07 -3.84107995e+07  1.64e-02 1.57e-09  1.01e+02    25s
+  26   5.37014220e+07 -1.90263223e+07  1.10e-02 2.41e-09  7.43e+01    25s
+  27   5.02644040e+07  1.02103079e+06  8.68e-03 1.02e-09  5.03e+01    25s
+  28   4.57302595e+07  6.39418483e+06  5.80e-03 8.24e-10  4.02e+01    26s
+  29   4.30007453e+07  1.38394523e+07  4.37e-03 1.42e-09  2.98e+01    26s
+  30   4.04349064e+07  1.83463047e+07  3.14e-03 1.29e-09  2.26e+01    26s
+  31   3.87972031e+07  2.20834293e+07  2.44e-03 1.02e-09  1.71e+01    27s
+  32   3.71592189e+07  2.53710238e+07  1.82e-03 1.06e-09  1.20e+01    27s
+  33   3.57631931e+07  2.69184328e+07  1.34e-03 1.05e-09  9.03e+00    27s
+  34   3.48912740e+07  2.78461637e+07  1.06e-03 1.16e-09  7.19e+00    28s
+  35   3.39200128e+07  2.86632393e+07  7.59e-04 9.30e-10  5.37e+00    28s
+  36   3.35114502e+07  2.92056253e+07  6.40e-04 1.06e-09  4.40e+00    28s
+  37   3.29889813e+07  2.95676084e+07  4.91e-04 1.00e-09  3.49e+00    29s
+  38   3.25885933e+07  3.00748135e+07  3.80e-04 1.30e-09  2.57e+00    29s
+  39   3.23800311e+07  3.03700429e+07  3.22e-04 1.02e-09  2.05e+00    29s
+  40   3.22730804e+07  3.04471936e+07  2.94e-04 1.58e-09  1.86e+00    30s
+  41   3.20788051e+07  3.05258960e+07  2.42e-04 7.88e-10  1.59e+00    30s
+  42   3.19941300e+07  3.06066719e+07  2.19e-04 1.14e-09  1.42e+00    30s
+  43   3.18505796e+07  3.06909694e+07  1.81e-04 1.91e-09  1.18e+00    31s
+  44   3.17959307e+07  3.07388003e+07  1.67e-04 1.63e-09  1.08e+00    31s
+  45   3.17638406e+07  3.07653790e+07  1.58e-04 1.78e-09  1.02e+00    31s
+  46   3.16957668e+07  3.08245965e+07  1.40e-04 1.56e-09  8.89e-01    32s
+  47   3.16443024e+07  3.08507214e+07  1.26e-04 9.41e-10  8.10e-01    32s
+  48   3.15854970e+07  3.09115248e+07  1.11e-04 1.61e-09  6.88e-01    32s
+  49   3.15257254e+07  3.09583673e+07  9.55e-05 1.71e-09  5.79e-01    33s
+  50   3.14374388e+07  3.09895815e+07  7.27e-05 1.76e-09  4.57e-01    33s
+  51   3.13852918e+07  3.10111728e+07  5.94e-05 2.04e-09  3.82e-01    33s
+  52   3.13425776e+07  3.10555464e+07  4.82e-05 1.94e-09  2.93e-01    34s
+  53   3.13006152e+07  3.10592084e+07  3.74e-05 1.91e-09  2.46e-01    34s
+  54   3.12845266e+07  3.10939821e+07  3.32e-05 7.79e-10  1.95e-01    34s
+  55   3.12530744e+07  3.11044112e+07  2.52e-05 1.57e-09  1.52e-01    35s
+  56   3.12471475e+07  3.11111565e+07  2.37e-05 1.01e-09  1.39e-01    35s
+  57   3.12291269e+07  3.11198945e+07  1.93e-05 9.31e-10  1.12e-01    35s
+  58   3.12075673e+07  3.11257390e+07  1.41e-05 1.12e-09  8.36e-02    36s
+  59   3.11973314e+07  3.11339677e+07  1.15e-05 7.20e-10  6.47e-02    36s
+  60   3.11897449e+07  3.11393928e+07  9.68e-06 1.80e-09  5.14e-02    36s
+  61   3.11772771e+07  3.11417568e+07  6.62e-06 1.11e-09  3.63e-02    37s
+  62   3.11700448e+07  3.11445312e+07  4.84e-06 1.90e-09  2.61e-02    37s
+  63   3.11654378e+07  3.11459397e+07  3.71e-06 3.17e-09  1.99e-02    37s
+  64   3.11603865e+07  3.11473336e+07  2.54e-06 1.60e-09  1.33e-02    38s
+  65   3.11575218e+07  3.11479136e+07  1.83e-06 2.47e-09  9.81e-03    38s
+  66   3.11559291e+07  3.11484099e+07  1.44e-06 3.51e-09  7.68e-03    38s
+  67   3.11534527e+07  3.11488758e+07  8.40e-07 3.87e-09  4.67e-03    39s
+  68   3.11516352e+07  3.11493739e+07  4.11e-07 4.15e-09  2.31e-03    39s
+  69   3.11509980e+07  3.11496093e+07  2.63e-07 2.99e-09  1.42e-03    39s
+  70   3.11504075e+07  3.11496724e+07  1.26e-07 3.45e-09  7.51e-04    40s
+  71   3.11500688e+07  3.11497409e+07  5.04e-08 5.45e-09  3.35e-04    40s
+  72   3.11499728e+07  3.11497988e+07  2.98e-08 3.51e-09  1.78e-04    40s
+Barrier solved model in 72 iterations and 40.27 seconds (57.85 work units)
+Optimal objective 3.11499728e+07
+Root crossover log...
+  299081 DPushes remaining with DInf 0.0000000e+00                40s
+       0 DPushes remaining with DInf 0.0000000e+00                44s
+  167664 PPushes remaining with PInf 1.1920958e+00                44s
+  116330 PPushes remaining with PInf 1.4757950e+00                49s
+  104643 PPushes remaining with PInf 1.6524794e+00                50s
+   74911 PPushes remaining with PInf 3.2182766e+00                55s
+   39769 PPushes remaining with PInf 8.4300744e-01                60s
+   13312 PPushes remaining with PInf 1.0407965e+01                65s
+       1 PPushes remaining with PInf 9.8289855e+00                68s
+  Push phase complete: Pinf 9.8289855e+00, Dinf 5.2818635e+07     68s
+Root simplex log...
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+  301584    3.1150065e+07   0.000000e+00   5.281864e+07     68s
+  302965    3.1150037e+07   0.000000e+00   3.247968e+05     70s
+  305175    3.1149967e+07   0.000000e+00   6.088308e+06     75s
+  306975    3.1149908e+07   0.000000e+00   2.388268e+07     80s
+  308980    3.1149823e+07   0.000000e+00   3.906569e+00     85s
+  309287    3.1149829e+07   0.000000e+00   0.000000e+00     86s
+  314579    3.1149583e+07   0.000000e+00   2.353701e+05     90s
+  320025    3.1149829e+07   0.000000e+00   0.000000e+00     94s
+Extra simplex iterations after uncrush: 10738
+Concurrent spin time: 26.96s (can be avoided by choosing Method=3)
+Solved with barrier
+Root relaxation: objective 3.114983e+07, 320025 iterations, 107.74 seconds (134.81 work units)
+Total elapsed time = 121.39s (DegenMoves)
+Total elapsed time = 126.90s (DegenMoves)
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+     0     0 3.1150e+07    0 3936          - 3.1150e+07      -     -  132s
+     0     0 3.1274e+07    0 4024          - 3.1274e+07      -     -  376s
+     0     0 3.1275e+07    0 3990          - 3.1275e+07      -     -  401s
+     0     0 3.1275e+07    0 4006          - 3.1275e+07      -     -  407s
+     0     0 3.1275e+07    0 4009          - 3.1275e+07      -     -  407s
+     0     0 3.1320e+07    0 4043          - 3.1320e+07      -     -  530s
+     0     0 3.1321e+07    0 4132          - 3.1321e+07      -     -  551s
+     0     0 3.1321e+07    0 4108          - 3.1321e+07      -     -  561s
+     0     0 3.1321e+07    0 4121          - 3.1321e+07      -     -  563s
+     0     0 3.1340e+07    0 3325          - 3.1340e+07      -     -  653s
+     0     0 3.1340e+07    0 3347          - 3.1340e+07      -     -  684s
+     0     0 3.1340e+07    0 3381          - 3.1340e+07      -     -  687s
+     0     0 3.1340e+07    0 3388          - 3.1340e+07      -     -  688s
+     0     0 3.1343e+07    0 3442          - 3.1343e+07      -     -  723s
+     0     0 3.1343e+07    0 3515          - 3.1343e+07      -     -  742s
+     0     0 3.1343e+07    0 3525          - 3.1343e+07      -     -  745s
+     0     0 3.1343e+07    0 3524          - 3.1343e+07      -     -  746s
+     0     0 3.1344e+07    0 3438          - 3.1344e+07      -     -  764s
+     0     0 3.1344e+07    0 3466          - 3.1344e+07      -     -  786s
+     0     0 3.1344e+07    0 3477          - 3.1344e+07      -     -  787s
+     0     0 3.1344e+07    0 3417          - 3.1344e+07      -     -  793s
+     0     0 3.1344e+07    0 3395          - 3.1344e+07      -     -  815s
+     0     0 3.1344e+07    0 3409          - 3.1344e+07      -     -  819s
+     0     0 3.1344e+07    0 3395          - 3.1344e+07      -     -  824s
+     0     0 3.1344e+07    0 3402          - 3.1344e+07      -     -  845s
+     0     0 3.1344e+07    0 3385          - 3.1344e+07      -     -  847s
+     0     0 3.1344e+07    0 3389          - 3.1344e+07      -     -  868s
+     0     0 3.1344e+07    0 3379          - 3.1344e+07      -     -  870s
+     0     0 3.1344e+07    0 3379          - 3.1344e+07      -     -  876s
+Exploring 4000000 nodes in zero objective heuristic
+ZeroObj: 0 nodes explored, total elapsed time 975s
+ZeroObj: 0 nodes explored, total elapsed time 980s
+ZeroObj: 0 nodes explored, total elapsed time 985s
+ZeroObj: 0 nodes explored, total elapsed time 990s
+ZeroObj: 0 nodes explored, total elapsed time 995s
+ZeroObj: 0 nodes explored, total elapsed time 1000s
+ZeroObj: 0 nodes explored, total elapsed time 1005s
+H    0     0                    1.111817e+12 3.1344e+07   100%     - 1008s
+Feasible solution found by zero objective heuristic at node 1
+H    0     0                    1.037151e+08 3.1344e+07  69.8%     - 1066s
+     0     2 3.1344e+07    0 3379 1.0372e+08 3.1344e+07  69.8%     - 1079s
+     1     4 3.1344e+07    1 3375 1.0372e+08 3.1344e+07  69.8% 16519 1080s
+     3     8 3.1344e+07    2 3360 1.0372e+08 3.1344e+07  69.8%  5690 1088s
+     7    14 3.1345e+07    3 3363 1.0372e+08 3.1344e+07  69.8%  3102 1120s
+    13    17 3.1348e+07    4 3343 1.0372e+08 3.1344e+07  69.8%  3267 1147s
+    16    23 3.1349e+07    5 3000 1.0372e+08 3.1344e+07  69.8%  3248 1172s
+    22    31 3.1347e+07    4 3025 1.0372e+08 3.1345e+07  69.8%  3094 1207s
+    30    35 3.1351e+07    7 3106 1.0372e+08 3.1345e+07  69.8%  3105 1245s
+H   32    35                    1.037149e+08 3.1345e+07  69.8%  3085 1245s
+    34    40 3.1347e+07    5 3001 1.0371e+08 3.1345e+07  69.8%  3087 1282s
+    39    45 3.1350e+07    6 2902 1.0371e+08 3.1345e+07  69.8%  3115 1329s
+    44    47 3.1351e+07    7 2880 1.0371e+08 3.1345e+07  69.8%  3277 1381s
+    46    56 3.1346e+07    4 3136 1.0371e+08 3.1345e+07  69.8%  3236 1432s
+    55    59 3.1353e+07    7 2794 1.0371e+08 3.1345e+07  69.8%  3332 1564s
+    58    70 3.1355e+07    8 3118 1.0371e+08 3.1345e+07  69.8%  3818 1715s
+    69    73 3.1358e+07    8 2921 1.0371e+08 3.1345e+07  69.8%  4239 1850s
+    72    96 3.1358e+07    9 2873 1.0371e+08 3.1345e+07  69.8%  4296 2032s
+H   92    96                    3.232783e+07 3.1345e+07  3.04%  3973 2032s
+    95   131 3.1374e+07   12 2663 3.2328e+07 3.1345e+07  3.04%  4443 2201s
+H   96   131                    3.214392e+07 3.1345e+07  2.48%  4397 2201s
+H  130   208                    3.214391e+07 3.1345e+07  2.48%  3933 2347s
+   207   244 3.1375e+07   17 2584 3.2144e+07 3.1345e+07  2.48%  3098 2448s
+H  214   244                    3.189111e+07 3.1345e+07  1.71%  3009 2448s
+   243   320 3.1376e+07   18 2499 3.1891e+07 3.1345e+07  1.71%  2747 2521s
+   319   350 3.1377e+07   20 2488 3.1891e+07 3.1345e+07  1.71%  2321 2595s
+H  320   350                    3.180308e+07 3.1345e+07  1.44%  2314 2595s
+H  334   350                    3.178234e+07 3.1345e+07  1.37%  2240 2595s
+   349   396 3.1372e+07   61 1850 3.1782e+07 3.1345e+07  1.37%  2159 2667s
+   395   424 3.1377e+07   21 2504 3.1782e+07 3.1345e+07  1.37%  1980 2736s
+   423   495 3.1377e+07   22 2523 3.1782e+07 3.1345e+07  1.37%  1883 2794s
+   494   503 3.1378e+07   30 2195 3.1782e+07 3.1345e+07  1.37%  1671 2839s
+H  499   503                    3.144068e+07 3.1345e+07  0.30%  1657 2839s
+   502   522 3.1375e+07   91 1769 3.1441e+07 3.1345e+07  0.30%  1668 2911s
+   521   602 3.1378e+07   31 2195 3.1441e+07 3.1345e+07  0.30%  1652 2964s
+   601   673 3.1380e+07   42 2075 3.1441e+07 3.1345e+07  0.30%  1478 3013s
+   672   773 3.1380e+07   47 2098 3.1441e+07 3.1345e+07  0.30%  1362 3060s
+H  772   884                    3.143877e+07 3.1345e+07  0.30%  1214 3108s
+H  849   884                    3.143808e+07 3.1345e+07  0.29%  1124 3108s
+   883  1016 3.1381e+07   54 1992 3.1438e+07 3.1345e+07  0.29%  1091 3154s
+H 1015  1060                    3.143364e+07 3.1345e+07  0.28%   981 3195s
+H 1031  1060                    3.143310e+07 3.1345e+07  0.28%   973 3195s
+H 1036  1060                    3.143294e+07 3.1345e+07  0.28%   972 3195s
+H 1054  1060                    3.142921e+07 3.1345e+07  0.27%   961 3195s
+  1059  1189 3.1383e+07   70 1997 3.1429e+07 3.1345e+07  0.27%   960 3241s
+H 1158  1189                    3.142846e+07 3.1345e+07  0.26%   893 3241s
+  1188  1197 3.1383e+07   81 1949 3.1428e+07 3.1345e+07  0.26%   881 3287s
+H 1192  1197                    3.141995e+07 3.1345e+07  0.24%   878 3287s
+  1196  1384 3.1383e+07   82 1972 3.1420e+07 3.1345e+07  0.24%   887 3327s
+  1383  1561 3.1384e+07   97 1947 3.1420e+07 3.1345e+07  0.24%   788 3374s
+H 1560  1561                    3.141994e+07 3.1345e+07  0.24%   715 3401s
+H 1560  1561                    3.141945e+07 3.1345e+07  0.24%   715 3476s
+H 1560  1561                    3.141868e+07 3.1345e+07  0.23%   715 3481s
+H 1560  1561                    3.141856e+07 3.1345e+07  0.23%   715 3486s
+H 1560  1561                    3.141853e+07 3.1345e+07  0.23%   715 3499s
+  1561  1562 3.1369e+07   85 63804 3.1419e+07 3.1345e+07  0.23%   715 4431s
+  1563  1563 3.1348e+07    5 3797 3.1419e+07 3.1345e+07  0.23%   714 4534s
+H 1563  1484                    3.141819e+07 3.1345e+07  0.23%   714 4664s
+  1564  1485 3.1372e+07   74 3591 3.1418e+07 3.1345e+07  0.23%   713 4680s
+  1565  1486 3.1404e+07  173 3562 3.1418e+07 3.1345e+07  0.23%   713 4853s
+  1566  1486 3.1383e+07  121 3170 3.1418e+07 3.1345e+07  0.23%   713 4899s
+  1567  1487 3.1375e+07   25 3327 3.1418e+07 3.1345e+07  0.23%   712 4926s
+  1568  1488 3.1376e+07   28 3353 3.1418e+07 3.1345e+07  0.23%   712 4931s
+  1570  1489 3.1349e+07    6 3358 3.1418e+07 3.1345e+07  0.23%   711 4955s
+  1571  1490 3.1390e+07  243 3310 3.1418e+07 3.1355e+07  0.20%   710 5018s
+  1572  1490 3.1391e+07  249 3270 3.1418e+07 3.1356e+07  0.20%   710 5036s
+  1573  1491 3.1387e+07  150 3259 3.1418e+07 3.1356e+07  0.20%   709 5049s
+  1574  1492 3.1377e+07   27 3295 3.1418e+07 3.1356e+07  0.20%   709 5054s
+  1575  1492 3.1371e+07   49 3304 3.1418e+07 3.1356e+07  0.20%   708 5077s
+  1576  1493 3.1358e+07    7 3215 3.1418e+07 3.1358e+07  0.19%   708 5123s
+  1577  1494 3.1387e+07  232 3240 3.1418e+07 3.1359e+07  0.19%   708 5143s
+  1578  1494 3.1394e+07  212 3248 3.1418e+07 3.1359e+07  0.19%   707 5154s
+  1579  1495 3.1359e+07    8 3246 3.1418e+07 3.1359e+07  0.19%   707 5159s
+  1580  1496 3.1368e+07   67 3261 3.1418e+07 3.1359e+07  0.19%   706 5165s
+  1581  1496 3.1414e+07  225 3266 3.1418e+07 3.1359e+07  0.19%   706 5190s
+  1582  1497 3.1394e+07  202 3107 3.1418e+07 3.1361e+07  0.18%   705 5234s
+  1583  1498 3.1406e+07  190 3146 3.1418e+07 3.1361e+07  0.18%   705 5261s
+  1584  1498 3.1404e+07  123 3171 3.1418e+07 3.1361e+07  0.18%   704 5268s
+  1585  1499 3.1383e+07   60 3226 3.1418e+07 3.1361e+07  0.18%   704 5274s
+  1586  1500 3.1406e+07  182 3200 3.1418e+07 3.1361e+07  0.18%   704 5276s
+  1587  1500 3.1380e+07   50 3224 3.1418e+07 3.1361e+07  0.18%   703 5302s
+  1588  1501 3.1362e+07   15 2941 3.1418e+07 3.1362e+07  0.18%   703 5341s
+  1589  1502 3.1380e+07   44 3045 3.1418e+07 3.1362e+07  0.18%   702 5351s
+  1591  1503 3.1414e+07  218 3056 3.1418e+07 3.1362e+07  0.18%   701 5355s
+  1592  1504 3.1383e+07   75 3082 3.1418e+07 3.1362e+07  0.18%   701 5376s
+H 1592  1429                    3.141793e+07 3.1362e+07  0.18%   701 5392s
+H 1592  1357                    3.141789e+07 3.1362e+07  0.18%   701 5402s
+  1594  1358 3.1362e+07    6 3071 3.1418e+07 3.1362e+07  0.18%   700 5408s
+  1595  1359 3.1400e+07   97 3114 3.1418e+07 3.1362e+07  0.18%   700 5411s
+  1597  1360 3.1366e+07   14 3089 3.1418e+07 3.1363e+07  0.18%   699 5441s
+  1598  1361 3.1375e+07   46 3017 3.1418e+07 3.1363e+07  0.18%   698 5459s
+  1599  1361 3.1395e+07  108 3056 3.1418e+07 3.1363e+07  0.18%   698 5467s
+  1600  1362 3.1394e+07  201 3059 3.1418e+07 3.1363e+07  0.18%   697 5472s
+  1601  1363 3.1385e+07  135 3087 3.1418e+07 3.1363e+07  0.18%   697 5497s
+  1602  1363 3.1369e+07   24 3109 3.1418e+07 3.1363e+07  0.18%   697 5512s
+  1603  1364 3.1414e+07  226 3137 3.1418e+07 3.1363e+07  0.18%   696 5523s
+  1604  1365 3.1406e+07  186 3160 3.1418e+07 3.1363e+07  0.18%   696 5548s
+  1605  1365 3.1381e+07  155 3045 3.1418e+07 3.1363e+07  0.17%   695 5570s
+  1606  1366 3.1393e+07   75 3121 3.1418e+07 3.1363e+07  0.17%   695 5577s
+  1607  1367 3.1388e+07  243 3084 3.1418e+07 3.1363e+07  0.17%   694 5581s
+  1608  1367 3.1385e+07   61 3094 3.1418e+07 3.1363e+07  0.17%   694 5607s
+  1609  1368 3.1369e+07   92 3119 3.1418e+07 3.1363e+07  0.17%   694 5620s
+  1610  1369 3.1363e+07    9 3222 3.1418e+07 3.1363e+07  0.17%   693 5625s
+  1611  1369 3.1384e+07   80 3227 3.1418e+07 3.1363e+07  0.17%   693 5652s
+  1612  1370 3.1381e+07  166 3071 3.1418e+07 3.1363e+07  0.17%   692 5670s
+  1614  1371 3.1372e+07   63 3161 3.1418e+07 3.1363e+07  0.17%   691 5700s
+  1615  1372 3.1383e+07   76 3112 3.1418e+07 3.1363e+07  0.17%   691 5724s
+H 1615  1302                    3.141717e+07 3.1363e+07  0.17%   691 5729s
+  1616  1303 3.1376e+07   26 3179 3.1417e+07 3.1363e+07  0.17%   691 5730s
+  1617  1303 3.1383e+07   78 3151 3.1417e+07 3.1363e+07  0.17%   690 5755s
+  1618  1304 3.1391e+07  171 3091 3.1417e+07 3.1363e+07  0.17%   690 5776s
+  1619  1305 3.1404e+07  176 3097 3.1417e+07 3.1363e+07  0.17%   689 5780s
+  1620  1305 3.1380e+07   51 3119 3.1417e+07 3.1363e+07  0.17%   689 5806s
+  1621  1306 3.1382e+07  174 3038 3.1417e+07 3.1363e+07  0.17%   688 6065s
+Warning: Optimization halted by the user
+--------------------------------------------------------------------------------------------------------------------------------
+Best objective found........................................................................................   31417167.97983873
+--------------------------------------------------------------------------------------------------------------------------------
+Finish searching now and accept the current best integer solution?  Yes (y) / No (n)
+Solution accepted.
+
+  1622  1307 3.1388e+07  200 3056 3.1417e+07 3.1363e+07  0.17%   688 6106s
+Cutting planes:
+  Learned: 26
+  Gomory: 156
+  Cover: 212
+  Implied bound: 537
+  Projected implied bound: 156
+  Clique: 15
+  MIR: 2018
+  Mixing: 11
+  StrongCG: 6
+  Flow cover: 2617
+  GUB cover: 85
+  Zero half: 1
+  Network: 2
+  RLT: 67
+  Relax-and-lift: 1048
+Explored 1622 nodes (2009224 simplex iterations) in 6107.71 seconds (10412.20 work units)
+Thread count was 16 (of 16 available processors)
+Solution count 10: 3.14172e+07 3.14172e+07 3.14179e+07 ... 3.14187e+07
+Solve interrupted
+Best objective 3.141716797986e+07, best bound 3.136322855430e+07, gap 0.1717%
+User-callback calls 272479, time in user-callback 5.16 sec
+Gurobi Optimizer version 12.0.0 build v12.0.0rc1 (win64 - Windows 10.0 (19045.2))
+CPU model: 13th Gen Intel(R) Core(TM) i9-13900KF, instruction set [SSE2|AVX|AVX2]
+Thread count: 8 physical cores, 16 logical processors, using up to 16 threads
+Non-default parameters:
+MIPGap  0.001
+Method  4
+ZeroObjNodes  4000000
+OutputFlag  0
+GURO_PAR_FIXMODELINDICATORS  1
+Optimize a model with 5019197 rows, 3009140 columns and 13338663 nonzeros
+Model fingerprint: 0xbba336f6
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+05]
+  Objective range  [2e-04, 2e+05]
+  Bounds range     [2e-05, 6e+06]
+  RHS range        [1e-03, 1e+05]
+Presolve removed 4969053 rows and 2929975 columns
+Presolve time: 2.26s
+Presolved: 50144 rows, 81032 columns, 1471974 nonzeros
+Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+Ordering time: 0.69s
+Barrier statistics:
+ Free vars  : 660
+ AA' NZ     : 1.857e+06
+ Factor NZ  : 3.675e+06 (roughly 80 MB of memory)
+ Factor Ops : 4.214e+08 (less than 1 second per iteration)
+ Threads    : 6
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   4.12246605e+14 -1.64365772e+14  1.05e+08 1.51e+05  2.98e+11     3s
+   1   1.48880656e+14 -1.60844057e+14  3.66e+07 5.82e+04  1.07e+11     3s
+   2   5.04073904e+13 -1.14508905e+14  1.01e+07 8.50e+03  3.08e+10     3s
+   3   7.19512462e+12 -6.32527011e+13  8.47e+05 2.93e+02  2.89e+09     4s
+   4   2.52668314e+12 -3.01171203e+13  2.81e+05 4.94e+01  9.81e+08     4s
+   5   1.04870481e+12 -1.38870749e+13  1.11e+05 1.14e+01  3.85e+08     4s
+   6   5.07579284e+11 -8.47252159e+12  5.00e+04 5.59e+00  1.84e+08     4s
+   7   2.58912529e+11 -5.98582783e+12  2.38e+04 3.58e+00  9.76e+07     4s
+   8   1.13912125e+11 -2.76812225e+12  9.29e+03 1.31e+00  3.92e+07     4s
+   9   5.39881404e+10 -1.38333914e+12  3.93e+03 5.46e-01  1.71e+07     4s
+  10   2.46594738e+10 -6.19883350e+11  1.51e+03 1.86e-01  6.67e+06     4s
+  11   1.04955001e+10 -2.42479410e+11  4.23e+02 5.16e-02  2.15e+06     4s
+  12   6.43354609e+09 -1.05024282e+11  1.47e+02 1.84e-02  8.46e+05     4s
+  13   4.86612222e+09 -4.53751025e+10  6.95e+01 7.27e-03  3.63e+05     4s
+  14   4.27185031e+09 -3.27297546e+10  4.83e+01 5.19e-03  2.60e+05     4s
+  15   2.89944656e+09 -1.64880674e+10  2.68e+01 2.67e-03  1.32e+05     4s
+  16   2.05110870e+09 -1.28793284e+10  1.50e+01 2.06e-03  9.84e+04     4s
+  17   1.14292236e+09 -5.25690593e+09  6.60e+00 2.68e-03  4.13e+04     4s
+  18   8.23591746e+08 -3.40249601e+09  4.51e+00 1.88e-03  2.70e+04     4s
+  19   5.58417468e+08 -1.61383728e+09  2.92e+00 1.26e-03  1.38e+04     4s
+  20   3.71000467e+08 -7.06408553e+08  1.90e+00 7.28e-04  6.83e+03     4s
+  21   1.40336216e+08 -3.36319189e+08  6.54e-01 4.10e-04  2.99e+03     4s
+  22   5.77410449e+07 -1.21059916e+08  1.46e-01 4.54e-04  1.12e+03     4s
+  23   4.60458581e+07 -4.45067022e+07  7.28e-02 4.88e-04  5.64e+02     4s
+  24   4.29444089e+07 -1.40104276e+07  5.42e-02 9.14e-04  3.55e+02     4s
+  25   3.74563125e+07 -1.11091667e+06  2.27e-02 6.54e-04  2.40e+02     4s
+  26   3.56977510e+07  1.50450410e+07  1.39e-02 3.33e-04  1.29e+02     4s
+  27   3.50395956e+07  1.94796419e+07  1.11e-02 2.69e-04  9.69e+01     4s
+  28   3.43804878e+07  2.16764304e+07  8.48e-03 2.35e-04  7.91e+01     4s
+  29   3.35943439e+07  2.31696223e+07  5.52e-03 3.21e-04  6.49e+01     5s
+  30   3.28779954e+07  2.45958275e+07  3.16e-03 2.90e-04  5.16e+01     5s
+  31   3.25275173e+07  2.71406287e+07  2.31e-03 2.97e-04  3.35e+01     5s
+  32   3.22796790e+07  2.84566274e+07  1.74e-03 2.92e-04  2.38e+01     5s
+  33   3.20841212e+07  2.96005518e+07  1.32e-03 1.82e-04  1.55e+01     5s
+  34   3.18877049e+07  3.00021757e+07  9.05e-04 1.35e-04  1.17e+01     5s
+  35   3.18447936e+07  3.02615119e+07  8.12e-04 1.75e-04  9.86e+00     5s
+  36   3.17630677e+07  3.05462516e+07  6.45e-04 1.56e-04  7.58e+00     5s
+  37   3.16850846e+07  3.07850161e+07  4.87e-04 1.46e-04  5.60e+00     5s
+  38   3.16210191e+07  3.09227877e+07  3.66e-04 1.74e-04  4.35e+00     5s
+  39   3.15896308e+07  3.09851115e+07  3.06e-04 1.52e-04  3.76e+00     5s
+  40   3.15484880e+07  3.10801114e+07  2.28e-04 1.18e-04  2.92e+00     5s
+  41   3.15220926e+07  3.11905359e+07  1.80e-04 9.90e-05  2.06e+00     5s
+  42   3.14969573e+07  3.12726912e+07  1.35e-04 8.18e-05  1.40e+00     5s
+  43   3.14874479e+07  3.12920085e+07  1.18e-04 8.73e-05  1.22e+00     5s
+  44   3.14641517e+07  3.13191842e+07  7.76e-05 9.00e-05  9.02e-01     5s
+  45   3.14495219e+07  3.13442261e+07  5.23e-05 6.30e-05  6.56e-01     5s
+  46   3.14432344e+07  3.13635276e+07  4.16e-05 4.57e-05  4.96e-01     5s
+  47   3.14364191e+07  3.13799215e+07  3.02e-05 3.13e-05  3.52e-01     5s
+  48   3.14297363e+07  3.13926132e+07  1.90e-05 2.00e-05  2.31e-01     5s
+  49   3.14258882e+07  3.14006786e+07  1.34e-05 1.32e-05  1.57e-01     5s
+  50   3.14235182e+07  3.14101203e+07  9.63e-06 5.32e-06  8.34e-02     5s
+  51   3.14219459e+07  3.14121599e+07  7.24e-06 3.71e-06  6.09e-02     6s
+  52   3.14203420e+07  3.14139023e+07  4.77e-06 5.97e-06  4.01e-02     6s
+  53   3.14189338e+07  3.14154737e+07  2.63e-06 9.44e-06  2.15e-02     6s
+  54   3.14179966e+07  3.14168284e+07  1.21e-06 5.69e-07  7.27e-03     6s
+  55   3.14176309e+07  3.14170228e+07  6.68e-07 4.67e-07  3.79e-03     6s
+  56   3.14175172e+07  3.14170539e+07  5.02e-07 3.92e-07  2.88e-03     6s
+  57   3.14172954e+07  3.14171118e+07  1.79e-07 1.80e-07  1.14e-03     6s
+  58   3.14172558e+07  3.14171485e+07  1.23e-07 5.75e-08  6.68e-04     6s
+  59   3.14171879e+07  3.14171653e+07  2.65e-08 2.10e-08  1.40e-04     6s
+  60   3.14171689e+07  3.14171674e+07  5.45e-09 4.45e-08  9.16e-06     6s
+  61   3.14171680e+07  3.14171680e+07  5.89e-09 5.55e-10  2.86e-07     6s
+  62   3.14171680e+07  3.14171680e+07  4.12e-09 6.58e-10  1.62e-08     6s
+  63   3.14171680e+07  3.14171680e+07  1.28e-09 1.07e-10  1.26e-10     6s
+Barrier solved model in 63 iterations and 6.24 seconds (12.28 work units)
+Optimal objective 3.14171680e+07
+Crossover log...
+    9964 DPushes remaining with DInf 0.0000000e+00                 6s
+       0 DPushes remaining with DInf 0.0000000e+00                 6s
+    6043 PPushes remaining with PInf 0.0000000e+00                 6s
+       0 PPushes remaining with PInf 0.0000000e+00                 7s
+  Push phase complete: Pinf 0.0000000e+00, Dinf 2.9266277e-11      7s
+Concurrent spin time: 0.05s
+Solved with barrier
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+   15330    3.1417168e+07   0.000000e+00   0.000000e+00      8s
+Solved in 15330 iterations and 8.10 seconds (15.11 work units)
+Optimal objective  3.141716798e+07
+User-callback calls 17242, time in user-callback 0.12 sec
+MT Schedule Step 1 of 1. Time: 01:43:43.6. Elapsed: 01:43:45.3. Remaining: 00:00:00.0. Memory: 13,120.88 MB
+
+--------------------------------------------------------------------------------------------------------------------------------
+Region Summary:
+--------------------------------------------------------------------------------------------------------------------------------
+Region                                            Demand  Generation  Net Export   Gen. Cost   Load Cost  USE (Dump)       Price
+                                                   (GWh)       (GWh)       (GWh)    ($000's)    ($000's)       (MWh)     ($/MWh)
+--------------------------------------------------------------------------------------------------------------------------------
+Central-Southern Region                           928.39      836.05     -137.92   12,032.59   50,391.03        0.00       54.28
+Northern Region                                   603.25      827.02      137.92   14,179.13   31,397.74        0.00       52.05
+--------------------------------------------------------------------------------------------------------------------------------
+SEN                                             1,531.64    1,663.07        0.00   26,211.72   81,788.77        0.00       53.40
+--------------------------------------------------------------------------------------------------------------------------------
+Zone Summary:
+--------------------------------------------------------------------------------------------------------------------------------
+Zone                                              Demand  Generation  Net Export   Gen. Cost   Load Cost  USE (Dump)       Price
+                                                   (GWh)       (GWh)       (GWh)    ($000's)    ($000's)       (MWh)     ($/MWh)
+--------------------------------------------------------------------------------------------------------------------------------
+01.North Zone                                     242.82      308.54       25.76    4,204.72   12,163.88        0.00       50.09
+02.Andes Zone                                     149.81       84.97      -88.35        0.00    8,069.65        0.00       53.86
+03.Antofagasta Zone                                64.48      181.28      104.26    6,219.48    3,464.67        0.00       53.73
+04.Cumbre Zone                                     17.06       79.47       59.34        0.00      856.54        0.00       50.22
+05.Cardones Zone                                   33.91       39.29       -0.99        0.86    1,756.10        0.00       51.78
+06.Maitencillo Zone                                24.75      103.49       79.33    3,748.59    1,324.58        0.00       53.53
+07.PandeAzucar Zone                                17.87       15.74       -2.38        4.57      909.80        0.00       50.91
+08.Choapa Zone                                     52.54       14.24      -39.04        0.90    2,852.52        0.00       54.29
+09.Coastal Zone                                    95.47      171.44       41.46    8,703.01    5,291.45        0.00       55.42
+10.Central Zone                                   439.23      146.19     -300.93    2,200.09   24,398.48        0.00       55.55
+11.Ancoa Zone                                     144.87      176.78       30.32      296.34    8,038.68        0.00       55.49
+12.Charrua Zone                                   110.38      243.09      132.52      785.07    5,631.98        0.00       51.02
+13.Concepcion Zone                                 67.33       22.37      -44.96       24.35    3,662.84        0.00       54.40
+14.Valdivia Zone                                   31.82        6.61      -25.20       22.41    1,503.64        0.00       47.26
+15.Osorno Zone                                      2.81       28.01       25.19        0.00      125.81        0.00       44.71
+16.PuertoMontt Zone                                36.47       41.55        3.68        1.31    1,738.16        0.00       47.66
+--------------------------------------------------------------------------------------------------------------------------------
+SEN                                             1,531.64    1,663.07        0.00   26,211.72   81,788.77        0.00       53.40
+--------------------------------------------------------------------------------------------------------------------------------
+Reserve Summary:
+--------------------------------------------------------------------------------------------------------------------------------
+Reserve                                        Min. Risk   Max. Risk        Risk   Provision    Shortage        Cost       Price
+                                                    (MW)        (MW)       (GWh)       (GWh)       (GWh)    ($000's)      ($/MW)
+--------------------------------------------------------------------------------------------------------------------------------
+CPF_LW                                              0.10        0.10        0.02       23.46        0.00        0.00        0.00
+CPF_RS                                              0.10        0.10        0.02       58.60        0.00        0.00        0.00
+CSF_LW                                              0.00        0.00        0.00        8.28        0.00        0.41        0.05
+CSF_RS                                              0.00        0.00        0.00       34.58        0.00      209.10        6.05
+CTF_LW                                              0.00      603.00       16.67       48.70        0.00        2.73        0.06
+CTF_RS                                             76.00      625.00       40.88       40.88        0.00      102.88        2.52
+CPF_LW_BESS                                         0.00        0.00        0.00       16.70        0.00        0.00        0.00
+CPF_RS_BESS                                         0.00        0.00        0.00        2.62        0.00        0.00        0.00
+CSF_LW_BESS                                         0.00        0.00        0.00       25.94        0.00        0.32        0.01
+CSF_RS_BESS                                         0.00        0.00        0.00        1.70        0.00       16.98        9.97
+CTF_LW_BESS                                         0.00        0.00        0.00        0.00        0.00        0.00        0.00
+CTF_RS_BESS                                         0.00        0.00        0.00        0.00        0.00        0.00        0.00
+--------------------------------------------------------------------------------------------------------------------------------
+SEN                                                 0.00      625.00       57.58      261.45        0.00      332.41        1.27
+--------------------------------------------------------------------------------------------------------------------------------
+MT Schedule Completed. Time: 01:43:45.4
+--------------------------------------------------------------------------------------------------------------------------------
+Minimization Objective Function:
+    Total MIP Solves:...........................................................................                               1
+    Time Limit Reached:.........................................................................                               0
+    No Integer Feasible Solution:...............................................................                               0
+    Linear Relaxation:..........................................................................                             N/A
+    Best Integer Solution:......................................................................               3.1417167980e+007
+    Best Bound:.................................................................................               3.1363228554e+007
+    Absolute Gap:...............................................................................               5.3939425520e+004
+    Relative Gap:...............................................................................                        0.1717 %
+    Infeasibilities:............................................................................                               0
+
+--------------------------------------------------------------------------------------------------------------------------------
+Component                                                                                         Time (sec.)       Contrib. (%)
+--------------------------------------------------------------------------------------------------------------------------------
+  Setup.........................................................................................      00:00:06.8          0.11 %
+  Modify........................................................................................      00:00:00.1          0.00 %
+  PTDFs.........................................................................................      00:00:00.1          0.00 %
+--------------------------------------------------------------------------------------------------------------------------------
+  Gurobi 12.0.0:................................................................................      01:43:31.1         99.77 %
+   - Work Units.................................................................................                       20,996.39
+   - Barrier (86 iterations, 1.1 s/iteration)...................................................      00:01:33.2          1.50 %
+   - Mixed Integer Program (MIP)................................................................      01:41:56.5         98.50 %
+--------------------------------------------------------------------------------------------------------------------------------
+  Solution......................................................................................      00:00:01.8          0.03 %
+  Write.........................................................................................      00:00:02.1          0.03 %
+  Other.........................................................................................      00:00:03.1          0.05 %
+--------------------------------------------------------------------------------------------------------------------------------
+  Peak Memory...................................................................................                    18,750.59 MB
+  Current Memory................................................................................                    13,121.05 MB
+--------------------------------------------------------------------------------------------------------------------------------
+<-- MT Schedule
+<-- Model "PRGdia_Full_Definitivo" Completed. Time: 01:43:57.2
+--------------------------------------------------------------------------------------------------------------------------------
+Error and Warning Messages for Model "PRGdia_Full_Definitivo":
+--------------------------------------------------------------------------------------------------------------------------------
+Number    Description                                                                               Severity    Action     Count
+--------------------------------------------------------------------------------------------------------------------------------
+85        <value> "<value>" minimum operating level (<value>) should be less than or equal to m...         2      Warn        13
+3026      Read <value> records(s) for object "<value>" in band <value>, but expected <value>. D...         3      Warn        50
+--------------------------------------------------------------------------------------------------------------------------------
