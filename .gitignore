@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+reports/*.xlsx
+data/DATOS20260509/*
+data/Model PRGdia_Full_Definitivo Solution/*
+!data/.gitkeep
+!reports/.gitkeep
