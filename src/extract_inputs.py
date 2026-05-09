@@ -47,7 +47,7 @@ def _extract_operational_restrictions(xml_path: Path) -> pd.DataFrame:
                     "object": object_name,
                     "property": property_name,
                     "value": value,
-                    "input_type": "restriccion_operativa",
+                    "input_type": "restricción_operativa",
                 }
             )
 
