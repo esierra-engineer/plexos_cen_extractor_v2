@@ -72,6 +72,135 @@ def _resolve_object_id(key_df: pd.DataFrame, membership_df: pd.DataFrame) -> pd.
     return membership_ids.map(mapping)
 
 
+def _build_period_sequence(tables: dict[str, pd.DataFrame], phase_id: int, period_type_id: int) -> list[object]:
+    period_df = tables.get(f"t_period_{period_type_id}", pd.DataFrame())
+    if period_df.empty:
+        for i in range(10):
+            candidate = tables.get(f"t_period_{i}")
+            if candidate is not None and not candidate.empty:
+                period_df = candidate
+                break
+
+    if period_df.empty:
+        return []
+
+    period_key_col = _find_col(period_df, "interval_id", "period_id", "id")
+    period_value_col = _find_col(period_df, "datetime", "start_time", "timestamp", "date", "name")
+    if period_key_col is None or period_value_col is None:
+        return []
+
+    period = period_df[[period_key_col, period_value_col]].copy()
+    period[period_key_col] = pd.to_numeric(period[period_key_col], errors="coerce")
+    period = period.dropna(subset=[period_key_col])
+    period_map = dict(zip(period[period_key_col].astype(int), period[period_value_col]))
+
+    phase_df = tables.get(f"t_phase_{phase_id}", pd.DataFrame())
+    if phase_df.empty:
+        return list(period[period_value_col])
+
+    phase_interval_col = _find_col(phase_df, "interval_id", "period_id", "id")
+    phase_order_col = _find_col(phase_df, "period_id", "interval_id", "id")
+    if phase_interval_col is None or phase_order_col is None:
+        return list(period[period_value_col])
+
+    phase = phase_df[[phase_interval_col, phase_order_col]].copy()
+    phase[phase_interval_col] = pd.to_numeric(phase[phase_interval_col], errors="coerce")
+    phase[phase_order_col] = pd.to_numeric(phase[phase_order_col], errors="coerce")
+    phase = phase.dropna(subset=[phase_interval_col, phase_order_col]).sort_values(phase_order_col)
+
+    return [period_map.get(int(interval_id), "") for interval_id in phase[phase_interval_col]]
+
+
+def _expand_key_values(
+    key: pd.DataFrame,
+    key_index_df: pd.DataFrame,
+    tables: dict[str, pd.DataFrame],
+    values: np.ndarray,
+    key_id_col: str,
+) -> pd.DataFrame:
+    idx_key_col = _find_col(key_index_df, "key_id", "id")
+    idx_position_col = _find_col(key_index_df, "position")
+    idx_length_col = _find_col(key_index_df, "length")
+    idx_offset_col = _find_col(key_index_df, "period_offset")
+    phase_id_col = _find_col(key, "phase_id")
+    period_type_id_col = _find_col(key, "period_type_id")
+
+    period_cache: dict[tuple[int, int], list[object]] = {}
+    key_index_map: dict[int, tuple[int, int, int]] = {}
+    if (
+        idx_key_col is not None
+        and idx_position_col is not None
+        and idx_length_col is not None
+        and not key_index_df.empty
+    ):
+        idx = key_index_df[[idx_key_col, idx_position_col, idx_length_col]].copy()
+        if idx_offset_col is not None:
+            idx[idx_offset_col] = pd.to_numeric(key_index_df[idx_offset_col], errors="coerce").fillna(0)
+        else:
+            idx["period_offset"] = 0
+            idx_offset_col = "period_offset"
+        idx[idx_key_col] = pd.to_numeric(idx[idx_key_col], errors="coerce")
+        idx[idx_position_col] = pd.to_numeric(idx[idx_position_col], errors="coerce")
+        idx[idx_length_col] = pd.to_numeric(idx[idx_length_col], errors="coerce")
+        idx = idx.dropna(subset=[idx_key_col, idx_position_col, idx_length_col])
+        idx = idx[(idx[idx_position_col] >= 0) & (idx[idx_length_col] > 0)]
+        key_index_map = {
+            int(row[idx_key_col]): (int(row[idx_position_col]), int(row[idx_length_col]), int(row[idx_offset_col]))
+            for _, row in idx.iterrows()
+        }
+
+    rows: list[dict[str, object]] = []
+    for _, row in key.iterrows():
+        key_id = int(row[key_id_col])
+
+        if key_id in key_index_map:
+            position, length, period_offset = key_index_map[key_id]
+            start_idx = position // 8
+            end_idx = start_idx + length
+            series_values = values[start_idx:end_idx]
+
+            phase_id = int(row[phase_id_col]) if phase_id_col is not None and pd.notna(row[phase_id_col]) else 0
+            period_type_id = (
+                int(row[period_type_id_col])
+                if period_type_id_col is not None and pd.notna(row[period_type_id_col])
+                else 0
+            )
+            cache_key = (phase_id, period_type_id)
+            if cache_key not in period_cache:
+                period_cache[cache_key] = _build_period_sequence(tables, phase_id=phase_id, period_type_id=period_type_id)
+
+            period_sequence = period_cache[cache_key]
+            period_slice = period_sequence[period_offset : period_offset + len(series_values)]
+
+            for i, value in enumerate(series_values):
+                period_value = period_slice[i] if i < len(period_slice) else ""
+                rows.append(
+                    {
+                        "key_id": key_id,
+                        "period": period_value,
+                        "class": row["class"],
+                        "object": row["object"],
+                        "property": row["property"],
+                        "value": value,
+                    }
+                )
+            continue
+
+        if 0 < key_id <= len(values):
+            rows.append(
+                {
+                    "key_id": key_id,
+                    "period": "",
+                    "class": row["class"],
+                    "object": row["object"],
+                    "property": row["property"],
+                    "value": values[key_id - 1],
+                }
+            )
+
+    return pd.DataFrame(rows, columns=["key_id", "period", "class", "object", "property", "value"])
+
+
 def extract_outputs(solution_xml: Path, data_bin: Path) -> pd.DataFrame:
     if not solution_xml.exists() or not data_bin.exists():
         return pd.DataFrame(columns=["key_id", "period", "class", "object", "property", "value"])
@@ -87,16 +216,8 @@ def extract_outputs(solution_xml: Path, data_bin: Path) -> pd.DataFrame:
     if key_df.empty:
         return pd.DataFrame(columns=["key_id", "period", "class", "object", "property", "value"])
 
-    period_df = pd.DataFrame()
-    for i in range(10):
-        candidate = tables.get(f"t_period_{i}")
-        if candidate is not None and not candidate.empty:
-            period_df = candidate
-            break
-
     key_id_col = _find_col(key_df, "key_id", "id")
     property_id_col = _find_col(key_df, "property_id")
-    period_id_col = _find_col(key_df, "period_id", "interval_id")
 
     if key_id_col is None or property_id_col is None:
         return pd.DataFrame(columns=["key_id", "period", "class", "object", "property", "value"])
@@ -112,9 +233,7 @@ def extract_outputs(solution_xml: Path, data_bin: Path) -> pd.DataFrame:
     key["_object_id"] = pd.to_numeric(object_ids, errors="coerce")
 
     values = np.fromfile(data_bin, dtype=np.float64)
-    key["value"] = np.nan
-    valid_mask = (key[key_id_col] > 0) & (key[key_id_col] <= len(values))
-    key.loc[valid_mask, "value"] = values[key.loc[valid_mask, key_id_col].to_numpy() - 1]
+    key_index_df = tables.get("t_key_index", pd.DataFrame())
 
     property_map = _id_to_name(property_df, ("property_id", "id"), ("name", "property_name"))
     object_name_map = _id_to_name(object_df, ("object_id", "id"), ("name", "object_name"))
@@ -136,21 +255,11 @@ def extract_outputs(solution_xml: Path, data_bin: Path) -> pd.DataFrame:
     key["property"] = key[property_id_col].map(property_map).fillna("")
     key["object"] = key["_object_id"].map(object_name_map).fillna("")
     key["class"] = key["_object_id"].map(class_map).fillna("")
+    key = key[key["property"].str.lower().isin(TARGET_PROPERTIES)].copy()
 
-    if period_id_col is not None and not period_df.empty:
-        period_key_col = _find_col(period_df, "period_id", "interval_id", "id")
-        period_value_col = _find_col(period_df, "datetime", "start_time", "timestamp", "date", "name")
-        if period_key_col is not None and period_value_col is not None:
-            period = period_df[[period_key_col, period_value_col]].copy()
-            period[period_key_col] = pd.to_numeric(period[period_key_col], errors="coerce")
-            period = period.dropna(subset=[period_key_col])
-            period_map = dict(zip(period[period_key_col].astype(int), period[period_value_col]))
-            key[period_id_col] = pd.to_numeric(key[period_id_col], errors="coerce")
-            key["period"] = key[period_id_col].map(period_map)
-        else:
-            key["period"] = ""
-    else:
-        key["period"] = ""
+    if key.empty:
+        return pd.DataFrame(columns=["key_id", "period", "class", "object", "property", "value"])
 
-    key = key[key["property"].str.lower().isin(TARGET_PROPERTIES)]
-    return key[[key_id_col, "period", "class", "object", "property", "value"]].rename(columns={key_id_col: "key_id"})
+    result = _expand_key_values(key, key_index_df, tables, values, key_id_col)
+    result["period"] = pd.to_datetime(result["period"], errors="coerce", dayfirst=True)
+    return result
