@@ -5,6 +5,7 @@ import numpy as np
 import pandas as pd
 
 TARGET_PROPERTIES = {"generation", "price", "flow", "demand"}
+FLOAT64_BYTE_SIZE = 8
 
 
 def _strip_namespace(tag: str) -> str:
@@ -156,7 +157,7 @@ def _expand_key_values(
         if key_id in key_index_map:
             position, length, period_offset = key_index_map[key_id]
             # t_key_index position is stored in bytes; float64 values use 8 bytes each.
-            start_idx = position // 8
+            start_idx = position // FLOAT64_BYTE_SIZE
             end_idx = start_idx + length
             series_values = values[start_idx:end_idx]
 
